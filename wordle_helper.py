@@ -11,7 +11,7 @@ def is_word_good(word):
     for i, letter in enumerate(word):
         if letter in bad_letters:
             return False
-        elif letter in bad_letters_by_pos[i] and (letter not in (word[:i] + word[i+1:])):
+        elif letter in bad_letters_by_pos[i]:
             return False
         elif word_so_far[i] and letter != word_so_far[i]:
             return False
